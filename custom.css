@@ -14,7 +14,6 @@ body {
 
 iframe {
   overflow: scroll;
-
 }
 
 .bd-placeholder-img {
@@ -43,3 +42,13 @@ iframe {
   color: rgb(165, 63, 0);
 }
 
+.table-fit{
+  width:200px !important;;
+  max-width:200px !important;;
+  overflow-y:scroll !important;;
+}
+
+.scrollme {
+  overflow-y: auto !important;
+  /* width:200px !important;; */
+}

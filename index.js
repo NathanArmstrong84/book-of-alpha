@@ -1,7 +1,8 @@
 
 var stripe = Stripe("pk_test_GhuLqvF7bjM8KDm0OdmqeZTp");
 var backEndUrl = 'https://stripe.downloadpdf.org';
-var domain = 'holy-bible.downloadpdf.org'
+//var domain = 'holy-bible.downloadpdf.org'
+var domain = 'localhost:8080'
 var priceID = 'price_1J4bTLIqc7Y0dKXeXwelWs83'
 
 // When the form is submitted...
