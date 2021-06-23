@@ -2,6 +2,7 @@
 var stripe = Stripe("pk_test_GhuLqvF7bjM8KDm0OdmqeZTp");
 var backEndUrl = 'https://stripe.downloadpdf.org';
 var domain = 'holy-bible.downloadpdf.org'
+var priceID = 'price_1J4bTLIqc7Y0dKXeXwelWs83'
 
 // When the form is submitted...
 var submitBtn = document.querySelector('#submit');
@@ -16,8 +17,8 @@ submitBtn.addEventListener('click', function (evt) {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      email: String(inputEl.value), // with the quantity
-      price: String("price_1J4bTLIqc7Y0dKXeXwelWs83"),
+      email: String(inputEl.value),  
+      price: String(priceID),
       domain: String(domain),
     }),
   }).then(function (result) {
