@@ -28,10 +28,6 @@
 
   <!-- Custom styles for this template -->
   <link href="custom.css" rel="stylesheet">
-
-  <!-- Custom js -->
-  <script src="https://js.stripe.com/v3/"></script>
-  <script src="./index.js" defer></script>
 </head>
 
 <body>
@@ -55,20 +51,69 @@
     </header>
 
     <main>
-      <div class="col">
-        <div class="card shadow-sm text-end">
-          <iframe id="ab" src="./alpha.pdf#toolbar=0" width="100%" height="350px"></iframe>
-          <div class="card-body text-end" style="border-top: 1px solid #e5e5e5;">
-            <p class="card-text fs-5 text-muted">This is a preview. Click "Get Book" for the entire book. Book will be
-              emailed to you shortly. That's it.</p>
-              <div id="error-message" class="stripe-error-msg"></div>
-            <div class="mb-3 row pull-right float-end">
-              <div class="input-group pull-right col-xs-4" style="width: 30rem;">
-                <input type="text" id="email" placeholder="Enter email..." class="form-control col-xs-4"
-                  aria-label="default input example">
-                <button class="btn btn-dark" type="button" id="submit">Get Book for $2</button>
+      <div class="album ">
+        <div class="container">
+    
+          <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 g-9 d-flex justify-content-center" >
+            <div class="col">
+              <div class="card shadow-sm text-center">
+                <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
+                <img class="card-img-top" src="error.gif" halt="Card image cap" style="width: 53%;" class="img-fluid mw-10">
+                <div class="card-body">
+                  <p class="card-text text-muted"><span style="color: rgb(210, 42, 42);">Transaction failed</span><br> Something went wrong. We were unable to process this transaction</p>
+               
+                  <!-- <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </div>
+                    <small class="text-muted">9 mins</small>
+                  </div> -->
+                </div>
               </div>
             </div>
+
+            <!-- <div class="col">
+              <div class="card shadow-sm">
+             
+                <div class="card-body">
+                  <table class="table table-light">
+                    <thead>
+                      <tr>
+                        <td>Receipt</td>
+                        <td></td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="table-light">
+                        <td>Item</td>
+                        <td>
+                           Holy Bible PDF
+                        </td>
+                        </tr>
+                        <tr class="table-light">
+                          <td>Sent</td>
+                          <td>
+                            Email
+                          </td>
+                          </tr>
+
+                          <tr class="table-light">
+                            <td>Total</td>
+                            <td>
+                              $5.25
+                            </td>
+                            </tr>
+                      </tbody>
+                  </table>
+                  <div class="d-flex justify-content-between float-end">
+                    <small class="text-muted">2 mins</small>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+    
+
           </div>
         </div>
       </div>
@@ -78,7 +123,7 @@
       <div class="row float-end">
         <div class="col-6 col-md">
           <ul class="list-unstyled text-small">
-            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Questions &nbsp;</a><a
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="../">Back &nbsp;</a><a
                 class="link-secondary text-decoration-none" href="#">Refunds</a></li>
           </ul>
         </div>
