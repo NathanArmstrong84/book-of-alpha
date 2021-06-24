@@ -1,9 +1,11 @@
 
-var stripe = Stripe("pk_test_GhuLqvF7bjM8KDm0OdmqeZTp");
+var stripe = Stripe("pk_live_51J5gCBE6l9W8YrrlfPSKUM88YsrNfJM6jVSH8u8hSTqo8hKdtRvl0we9o2ZXKHGZbyvZ0Fu0ownaaUE7bnvg27bq00JbuE5L5x");
+//var stripe = Stripe("pk_test_GhuLqvF7bjM8KDm0OdmqeZTp");
 var backEndUrl = 'https://stripe.downloadpdf.org';
-//var domain = 'holy-bible.downloadpdf.org'
-var domain = 'localhost:8080'
-var priceID = 'price_1J4bTLIqc7Y0dKXeXwelWs83'
+var domain = 'holy-bible.downloadpdf.org'
+//var domain = 'localhost:8080'
+var priceID = 'price_1J5gMcE6l9W8Yrrls6ibaHh6'
+//var priceID = 'price_1J4bTLIqc7Y0dKXeXwelWs83'
 
 // When the form is submitted...
 var submitBtn = document.querySelector('#submit');
