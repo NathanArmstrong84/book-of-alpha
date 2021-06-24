@@ -30,7 +30,6 @@
  
   <!-- Custom styles for this template -->
   <link href="custom.css" rel="stylesheet">
-
   <!-- Custom js -->
   <script src="https://js.stripe.com/v3/"></script>
   <script src="./index.js" defer></script>
@@ -59,11 +58,18 @@
             <p class="card-text fs-5 text-muted">This is a preview. Click "Get Book" for the entire book. Book will be
               emailed to you shortly. That's it.</p>
               <div id="error-message" class="stripe-error-msg"></div>
-            <div class="mb-2 row pull-right float-end">
-              <div class="input-group pull-right col-xs-4 col-1 col-sm-2">
-                <input type="text" id="email" placeholder="Enter email..." class="form-control"
-                  aria-label="default input example">
+            <div class="mb-2 row pull-right float-end col-xs-1 col-sm-6 col-md-8 col-lg-6">
+              <div id="emailValidation">
+                You need to provide a VALID email.
+              </div>
+              <div class="input-group  " style="width: 100%;">
+                
+
+                <input oninput="cleartext();" onkeydown="cleartext();" type="text" id="email"  placeholder="Enter email..." class="form-control"
+                  aria-label="customer email">
                 <button class="btn btn-dark" type="button" id="submit">Get Book for $2</button>
+    
+
               </div>
             </div>
           </div>

@@ -42,13 +42,18 @@ iframe {
   color: rgb(165, 63, 0);
 }
 
-.table-fit{
-  width:200px !important;;
-  max-width:200px !important;;
-  overflow-y:scroll !important;;
-}
-
 .scrollme {
   overflow-y: auto !important;
   /* width:200px !important;; */
 }
+
+#emailValidation{
+  width: 100%;
+  padding: 5px 0;
+  text-align: center;
+  color: rgb(162, 0, 0);
+  background-color: rgb(255, 226, 226);
+  margin-bottom: 10px;
+  display: none;
+}
+

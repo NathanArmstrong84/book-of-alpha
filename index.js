@@ -13,6 +13,12 @@ submitBtn.addEventListener('click', function (evt) {
   var inputEl = document.getElementById('email');
   var email = String(inputEl.value);
 
+  if (email === "" || !validateEmail(email)) {
+    var x = document.getElementById("emailValidation");
+    x.style.display = "block";
+    return false;
+  }
+ 
   // Create the checkout session. 
   fetch(backEndUrl+'/create-checkout-session', {
     method: 'POST',
@@ -41,3 +47,16 @@ submitBtn.addEventListener('click', function (evt) {
     });
   });
 });
+
+    
+
+function validateEmail(email) {
+  const email_regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return email_regex.test(String(email).toLowerCase());
+}
+
+function cleartext(){
+  console.log("clearing")
+  var x = document.getElementById("emailValidation");
+  x.style.display = "none";
+}
