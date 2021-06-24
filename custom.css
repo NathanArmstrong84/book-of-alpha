@@ -57,3 +57,8 @@ iframe {
   display: none;
 }
 
+
+.mainTitle {
+  font-family:'Trebuchet MS'; 
+  font-weight: 900;
+}
