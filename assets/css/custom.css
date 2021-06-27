@@ -62,3 +62,14 @@ iframe {
   font-family:'Trebuchet MS'; 
   font-weight: 900;
 }
+
+
+#refundFormSuccess{
+  display: none;
+}
+
+
+#refundForm{
+  display: block;
+}
+

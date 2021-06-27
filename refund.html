@@ -32,7 +32,8 @@
   <!-- Custom styles for this template -->
   <link href="./assets/css/custom.css" rel="stylesheet"crossorigin="anonymous" >
 
-  <script src="./assets/js/success.js" defer></script>
+  <script src="./assets/js/refund.js" defer></script>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
 
 </head>
 
@@ -54,65 +55,66 @@
     <main>
       <div class="album ">
         <div class="container">
-    
-          <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 g-9">
-            <div class="col">
+          <div class="row row-cols-1  g-9">
+             <div id="refundForm">  
               <div class="card shadow-sm text-center">
-                <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
-                <img class="card-img-top" src="./assets/img/gifs/success.gif" halt="Card image cap" class="img-fluid mw-10">
                 <div class="card-body">
-                  <p class="card-text text-muted"><span style="color: green;">Successful!</span><br> Please check your email to download attachment </p>
+                    <form class="form-control">
+                      <div class="row mb-3">
+                        <h2>Request refund</h2>
+                      </div>
+                      
+                      <div class="row mb-3">
+                          <p class="text-muted fs-5">All refunds will take up to 3-4 days to process. Please provide the same email you used when purchasing from DownloadPDF.org</p>
+                      </div>
+
+                      <div class="row mb-3">
+                        <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Email</label>
+                        <div class="col-sm-8">
+                          <input type="email" oninput="cleartext();" onkeydown="cleartext();" id="email" class="form-control form-control-lg"  placeholder="Enter valid email">
+                        </div>
+                      </div>
+
+                      <div class="row mb-3">
+                        <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">What's was the issue?</label>
+                        <div class="col-sm-8">
+                            <textarea maxlength='110' class="form-control" placeholder="Briefly explain what was wrong (limit)" id="complain" rows="3"></textarea>
+                            <span class="pull-right label label-default float-end text-muted" id="count_message"></span>
+                        </div>
+                        
+                      </div>
+                      <div id="emailValidation">
+                        You need to provide a VALID email.
+                      </div>
+
+                      <div class="col-12 mb-3">
+                        <button class="g-recaptcha btn btn-dark" 
+                            data-sitekey="6LfiJV4bAAAAANlX5ZKLHELI3oqc9M14KfjY_HGd" 
+                            data-callback='onSubmit' 
+                            data-action='submit'
+                            class="btn btn-dark">Request refund</button>
+                      </div>
+                      </form>
                 </div>
               </div>
-            </div>
- 
-            <div class="col">
-              <div class="card shadow-sm">
-             
-                <div class="card-body">
-                  <div class="scrollme">
-                  <table class="table table-light">
-                    <thead>
-                      <tr>
-                        <td>Receipt</td>
-                        <td></td>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr class="table-light">
-                        <td>Item</td>
-                        <td>
-                           Holy Bible PDF
-                        </td>
-                        </tr>
-                        <tr>
-                          <td>Sent</td>
-                          <td id="update">
-                            Email
-                          </td>
-                          </tr>
+            </div> 
 
-                          <tr>
-                            <td>Total</td>
-                            <td id="paid">
-                              $1.49
-                            </td>
-                            </tr>
-                      </tbody>
-                  </table>
-                </div>
-                <div class="d-flex justify-content-center pt-3">
+
+            <!-- DIV WHEN FORM IS SUCCESSFUL-->
+            <div id="refundFormSuccess">  
+              <div class="card shadow-sm text-center">
+                <div class="card-body">
+                  <div class="text-center float-center">
+                    <img class="card-img-top  col-sm-8  mb-4" style="width: 35%;" src="./assets/img/gifs/success.gif" halt="Card image cap" class="img-fluid mw-10">
+                  </div>
+                  <p class="card-text text-muted mb-4"><span style="color: green;">We will get back to you shortly.</span><br> Please reach out to us if you haven't heard back in 3 days. Thank you!</p>
                   <div class="btn-group">
                     <a href="./" class="btn btn-sm btn-outline-secondary">Go Back</a>
                   </div>
-                </div> 
-                  <div class="d-flex justify-content-between float-end">        
-                    <small class="text-muted" id="timeStamp">2 mins</small>
-                  </div>
                 </div>
               </div>
-            </div>
-    
+            </div> 
+            <!-- END DIV WHEN FORM IS SUCCESSFUL-->
 
           </div>
         </div>
@@ -124,7 +126,6 @@
         <div class="col-6 col-md">
           <ul class="list-unstyled text-small">
             <li class="mb-1"><a class="link-secondary text-decoration-none" href="./">Back &nbsp;</a>
-              <!-- <a class="link-secondary text-decoration-none" href="#">Refunds</a> -->
             </li>
           </ul>
         </div>

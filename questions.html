@@ -32,7 +32,7 @@
   <!-- Custom styles for this template -->
   <link href="./assets/css/custom.css" rel="stylesheet"crossorigin="anonymous" >
 
-  <script src="./assets/js/success.js" defer></script>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
 
 </head>
 
@@ -54,65 +54,29 @@
     <main>
       <div class="album ">
         <div class="container">
-    
-          <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 g-9">
-            <div class="col">
+          <div class="row row-cols-1  g-9">
+            <!-- DIV WHEN FORM IS SUCCESSFUL-->
+            <div>  
               <div class="card shadow-sm text-center">
-                <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg> -->
-                <img class="card-img-top" src="./assets/img/gifs/success.gif" halt="Card image cap" class="img-fluid mw-10">
-                <div class="card-body">
-                  <p class="card-text text-muted"><span style="color: green;">Successful!</span><br> Please check your email to download attachment </p>
-                </div>
-              </div>
-            </div>
- 
-            <div class="col">
-              <div class="card shadow-sm">
-             
-                <div class="card-body">
-                  <div class="scrollme">
-                  <table class="table table-light">
-                    <thead>
-                      <tr>
-                        <td>Receipt</td>
-                        <td></td>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr class="table-light">
-                        <td>Item</td>
-                        <td>
-                           Holy Bible PDF
-                        </td>
-                        </tr>
-                        <tr>
-                          <td>Sent</td>
-                          <td id="update">
-                            Email
-                          </td>
-                          </tr>
-
-                          <tr>
-                            <td>Total</td>
-                            <td id="paid">
-                              $1.49
-                            </td>
-                            </tr>
-                      </tbody>
-                  </table>
-                </div>
-                <div class="d-flex justify-content-center pt-3">
-                  <div class="btn-group">
+                <div class="card-body"> 
+                    <div  class="m-3 text-left" style="float: left; text-align: left;">
+                        <h4>Who owns the content of the PDF?</h4>
+                        <p>All the content is Public Domain</p>
+                        <h4>Do we store any payment information?</h4>
+                        <p>No. We do not store any any credit card information. We will forward you to Stripe's checkout page. Stripe will process your payment.
+                            After your payment is processed, we redirect you back to our site. We will email you the content as a PDF attachment. 
+                        </p>
+                        <h4>Not happy with your purchase?</h4>
+                        <p>No worries. Fill out this <a href="./refund.html">refund form</a>. We will process your refund as soon as possible.</p>
+                    </div>
+                   
+                  <div class="btn-group text-center float-center">
                     <a href="./" class="btn btn-sm btn-outline-secondary">Go Back</a>
                   </div>
-                </div> 
-                  <div class="d-flex justify-content-between float-end">        
-                    <small class="text-muted" id="timeStamp">2 mins</small>
-                  </div>
                 </div>
               </div>
-            </div>
-    
+            </div> 
+            <!-- END DIV WHEN FORM IS SUCCESSFUL-->
 
           </div>
         </div>
@@ -124,7 +88,6 @@
         <div class="col-6 col-md">
           <ul class="list-unstyled text-small">
             <li class="mb-1"><a class="link-secondary text-decoration-none" href="./">Back &nbsp;</a>
-              <!-- <a class="link-secondary text-decoration-none" href="#">Refunds</a> -->
             </li>
           </ul>
         </div>
