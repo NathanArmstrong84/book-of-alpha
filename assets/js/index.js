@@ -4,7 +4,7 @@ var stripe = Stripe("pk_live_51J5gCBE6l9W8YrrlfPSKUM88YsrNfJM6jVSH8u8hSTqo8hKdtR
 var backEndUrl = 'https://stripe.downloadpdf.org';
 var domain = 'bible.downloadpdf.org'
 //var domain = 'localhost:8080'
-var priceID = 'price_1J5gMcE6l9W8Yrrls6ibaHh6'
+var priceID = 'price_1J6pbsE6l9W8YrrlTwZYFFzp'
 //var priceID = 'price_1J4bTLIqc7Y0dKXeXwelWs83'
 
 // When the form is submitted...
