@@ -1,7 +1,7 @@
 var urlParams = new URLSearchParams(window.location.search);
 var sessionId = urlParams.get('session_id');
 var email = urlParams.get('email');
-var backEndUrl = 'https://stripe.downloadpdf.org';
+var backEndUrl = 'https://stripe.warrensbox.org';
 var price = '$1.49'
 
 var date = new Date();
